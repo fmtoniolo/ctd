@@ -1,0 +1,23 @@
+body{
+    background-color: cornsilk;
+    font-family: cursive;
+}
+header h1 {
+    color: blue;
+}
+.job-title {
+    color: white;
+    background-color: blue;
+}
+
+#high {
+    color: blue;
+}
+
+footer ul {
+    background-color: rgb(80, 80, 80);
+    color: cornsilk;
+}
+footer a {
+    font-weight: bold;
+}
