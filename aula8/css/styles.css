@@ -64,3 +64,31 @@ a {
     border: black ;
     border-radius: 10px;
 }
+
+.trailer {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 12px;
+}
+
+iframe {
+    width: 50%;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;  
+}
+
+.footer {
+    height: 50px;
+    padding: 10px;
+    background-color: #333333;
+}
+
+.footer p {
+    text-align: center;
+    font-family: monospace;
+    font-weight: 300;
+}
