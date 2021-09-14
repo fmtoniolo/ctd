@@ -1,0 +1,47 @@
+main {
+    width: 1000px;
+    height: 1000px;
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    opacity: 0%;
+}
+
+.circle:hover{
+    animation: rolar 1s infinite;
+}
+
+
+@keyframes rolar {
+    0% {opacity: 0%;}
+    33% {opacity: 33%;}
+    66% {opacity: 66%; }
+    100% {opacity: 100%; transform: translateX(600px);}
+}
+
+img {
+    margin-top: 75px;
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+img:hover {
+    transform: rotate(20deg) translate(200px);
+}
+
+button {
+    margin-top: 75px;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    transition: color 1s, background-color 1s;
+}
+button:hover {
+    background-color: yellow;
+    color: black;
+    
+}
