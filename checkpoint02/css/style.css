@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans:wght@700&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: ivory;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    background-color: lavender;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 15vh; /* ajusa o mesmo pra telas grandes? */
+    grid-area: header;
+    
+}
+
+.title {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.dropdown {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    height: 50px;
+    width: 120px; 
+    background-color: inherit;
+    border: solid black 3px;
+    border-radius: 30px;
+}
+
+.menu {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    display: none;
+    
+}
+
+main {
+    margin: 0;
+    background-color: lawngreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    grid-area: main;
+}
+
+aside {
+    margin: 0;
+    background-color: lightsalmon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0.3;
+    grid-area: aside;
+}
+
+footer {
+    margin: 0;
+    background-color: lightslategray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    grid-area: footer;
+}
+
+@media only screen and (min-width: 769px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        grid-template-rows: 10vh 1fr 10vh;
+        grid-template-areas: 
+        'header header'
+        'main aside'
+        'footer footer';
+        margin: 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-flow: row;
+                
+    }
+
+    .menu li {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .dropdown { display: none; }
+}
+
+fieldset {
+    margin: 5%;
+    border: 2px violet solid;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+   }
+   
+   legend {
+     background-color: lawngreen;
+     color: rgb(0, 0, 0);
+     font-size: 30px;
+     padding: 10px;
+     position: absolute; /* reposiciona a tag em relação ao body OU ao ancestral posicionado mais próximo */
+     top: -30px;
+   }
+   
+   h1, div {
+     margin: 20px;
+   }
+   
+   button {
+     padding: 10px;
+     margin: 10px;
+     background-color: blueviolet;
+     color: white;
+     font-size: 20px;
+     border: 0;
+     border-radius: 30px;
+   }
+   
+   #buttons {
+     text-align: center;
+   }

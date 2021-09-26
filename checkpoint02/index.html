@@ -1,47 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Checkpoint 02</title>
-</head>
-<body>
-    <header>
-        
-            <h1 class="title">Checkpoint 02 - formulário</h1>
-        
-       
-            <nav>
-                <ul class="menu">
-                  <li><a href="#">Início</a></li>
-                  <li><a href="#">Sobre</a></li>
-                  <li><a href="#">Ajuda</a></li>
-                  <li><a href="#">Contato</a></li>
-                </ul>
+  <head>
+    <meta charset="UTF-8" />
 
-                <select class="dropdown"> 
-                    <option value="" selected="selected">Menu</option> 
-                    <option value="#">Início</option> 
-                    <option value="#">Sobre</option> 
-                    <option value="#">Ajuda</option> 
-                    <option value="#">Contato</option> 
-                </select> 
-              </nav>
-        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Checkpoint 02</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Vagas para Desenvolvedores</h1>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Ajuda</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+
+        <select class="dropdown">
+          <option value="" selected="selected">Menu</option>
+          <option value="#">Início</option>
+          <option value="#">Sobre</option>
+          <option value="#">Ajuda</option>
+          <option value="#">Contato</option>
+        </select>
+      </nav>
     </header>
 
     <main>
-        Main
+      <div class="main-title">
+        <h1>Faça seu cadastro abaixo</h1>
+      </div>
+      <legend>Dados Pessoais</legend>
+      <form action="/usuario/cadastro" method="POST" id="usrcad">
+        <fieldset class="field-top" form="usrcad">
+          
+          <div>
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              required
+              placeholder="Insira seu nome aqui"
+            />
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Insira seu email"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="data">Data de nascimento:</label>
+            <input
+              type="date"
+              name="data"
+              value="2000-01-01"
+              required
+              min="1920-01-01"
+              max="2010-12-31"
+            />
+          </div>
+
+          <div>
+            <label for="telefone">Telefone: </label>
+            <input type="tel" name="telefone" id="telefone" maxlength="11"
+            placeholder="DDD+Número" />
+          </div>
+
+          <div>
+            <label for="endereco">Endereço: </label>
+            <input type="text" name="endereco" id="endereco" />
+          </div>
+
+          <div>
+            <label for="cidade">Cidade: </label>
+            <input type="text" name="cidade" id="cidade" />
+          </div>
+
+          <div>
+            <label for="nome">LinkedIn:</label>
+            <input
+              type="text"
+              name="linkedin"
+              id="linkedin"
+              placeholder="Insira seu LinkedIn aqui"
+            />
+          </div>
+
+          <div>
+            <label for="pwd">Senha:</label>
+            <input type="password" name="pwd" id="pwd" required />
+          </div>
+        </fieldset>
+        
+        <legend>Dados Profissionais</legend>
+        <fieldset class="field-bot" form="usrcad">
+          
+          <div>
+            <p>Disponibilidade de Horário:</p>
+            <input
+              type="radio"
+              name="horario"
+              value="manha"
+              id="manha"
+              required
+            />
+            <label for="manha">Manhã</label>
+            <input type="radio" name="horario" value="tarde" id="tarde" />
+            <label for="tarde">Tarde</label>
+            <input type="radio" name="horario" value="noite" id="noite" /><label
+              for="noite"
+              >Noite</label
+            >
+            <input
+              type="radio"
+              name="horario"
+              value="integral"
+              id="integral"
+            /><label for="integral">Integral</label>
+          </div>
+
+          <div>
+            <label for="situacao">Selecione sua situação profissional:</label>
+            <select name="situacao" id="situacao">
+              <option value="1">Trabalho na área</option>
+              <option value="2">
+                Trabalho em outra área, mas quero migrar
+              </option>
+              <option value="3">Sou estudante</option>
+              <option value="4">Sou dev, mas estou em busca de trabalho</option>
+              <option value="5">Sou free-lancer</option>
+            </select>
+          </div>
+
+          <div>
+            <p>Linguagens que conhece:</p>
+            <input type="checkbox" name="linguagens" value="C" id="C" />
+            <label for="C">C</label>
+            <input type="checkbox" name="linguagens" value="C++" id="C++" />
+            <label for="C++">C++</label>
+            <input type="checkbox" name="linguagens" value="C#" id="C#" />
+            <label for="C#">C#</label>
+            <input type="checkbox" name="linguagens" value="Java" id="Java" />
+            <label for="Java">Java</label>
+            <input
+              type="checkbox"
+              name="linguagens"
+              value="Javascript"
+              id="Javascript"
+            />
+            <label for="Javascript">Javascript</label>
+          </div>
+
+          <div>
+            <p>Vaga de Interesse (1ª Opção):</p>
+            <input
+              type="radio"
+              name="vaga1"
+              value="frontend"
+              id="frontend"
+              required
+            />
+            <label for="frontend">Front-end Web Developer</label>
+            <input type="radio" name="vaga1" value="backend" id="backend" />
+            <label for="backend">Back-end Web Developer</label>
+            <input
+              type="radio"
+              name="vaga1"
+              value="dataengineer"
+              id="dataengineer"
+            /><label for="dataengineer">Data Engineer</label>
+            <input
+              type="radio"
+              name="vaga1"
+              value="javaengineer"
+              id="javaengineer"
+            /><label for="javaengineer">Java Engineer</label>
+          </div>
+
+          <div>
+            <p>Vaga de Interesse (2ª Opção):</p>
+            <input
+              type="radio"
+              name="vaga2"
+              value="frontend"
+              id="frontend"
+              required
+            />
+            <label for="frontend">Front-end Web Developer</label>
+            <input type="radio" name="vaga2" value="backend" id="backend" />
+            <label for="backend">Back-end Web Developer</label>
+            <input
+              type="radio"
+              name="vaga2"
+              value="dataengineer"
+              id="dataengineer"
+            /><label for="dataengineer">Data Engineer</label>
+            <input
+              type="radio"
+              name="vaga2"
+              value="javaengineer"
+              id="javaengineer"
+            /><label for="javaengineer">Java Engineer</label>
+          </div>
+        </fieldset>
+
+        <div id="buttons">
+          <button type="reset">Limpar</button>
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
     </main>
 
     <aside>
-        Aside
+      <h1 class="aside-title">Vagas disponíveis</h1>
+      <div class="box-aside">
+        <div class="box-vagas">
+          <a href="#">
+            <img src="./img/coding.png" alt="Ícone vagas">
+            Front-end developer
+          </a>
+        </div>
+        <div class="box-vagas">
+          <a href="#">
+            <img src="./img/coding.png" alt="Ícone vagas">
+            Back-end developer
+          </a>
+        </div>
+        <div class="box-vagas">
+          <a href="#">
+            <img src="./img/coding.png" alt="Ícone vagas">
+            Full-Stack developer
+          </a>
+        </div>
+        <div class="box-vagas">
+          <a href="#">
+            <img src="./img/coding.png" alt="Ícone vagas">
+            Java developer
+          </a>
+        </div>
+        <div class="box-vagas">
+          <a href="#">
+            <img src="./img/coding.png" alt="Ícone vagas">
+            C# developer
+          </a>
+        </div>
+        <div class="box-vagas">
+          <a href="#">
+            <img src="./img/coding.png" alt="Ícone vagas">
+            Front end developer
+          </a>
+        </div>
+      </div>
     </aside>
 
     <footer>
-        Footer
+      <p>Copyright &copy; 2021</p>
+      <p>Felipe Toniolo | Iago Maciel | Lucas Mota</p>
+      <div class="footer-link-container">
+        <a href="https://github.com/fmtoniolo/frontend01/tree/master/checkpoint02" target="_blank">
+          <img src="./img/github.png" alt="Github icon">
+          &nbsp; Github
+        </a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
